@@ -42,6 +42,10 @@ Puis on copie à l'interieur de notre propre docker, le contenu souhaité avec C
 
 * You are able to show where the apache config files are located (in a running container).
 
+Il suffit d'utiliser la commande `exec -it`et de demander d'acc au `bash` pour pourvoir se trouver dans le noyaux linux du conteneur et ainsi nivaguer comme on veut: `docker exec -it NOM_DU_DOCKER /bin/bash`
+
+Ensuite il faut se trouver dans `etc/apache2/` avec la commande `cd etc/apache2/`puis faire un `ls` pour voir tout les fichier de config. On peut les lire avec la commande `more`.
+
 * You have **documented** your configuration in your report.
 
 
