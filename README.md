@@ -16,10 +16,13 @@ https://github.com/laurer6/Teaching-HEIGVD-RES-2021-Labo-HTTPInfra/blob/fb-apach
 
 il suffit de lancer ces deux commandes dans le répertoire où se trouve le Dockerfile : 
 
-docker build -t res/apache_php .
+```bash
+$ docker docker build -t res/apache_php .
+```
 
-'docker run -p 9090:80 res/apache_php'
-
+```bash
+$ docker run -p 9090:80 res/apache_php
+```
 
 * You have used a nice looking web template, different from the one shown in the webcast.
 
