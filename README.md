@@ -34,8 +34,10 @@ On a utilisé ce bootstrap : https://onepagelove.com/bolt et on l'a modifié un 
 
 * You are able to explain what you do in the Dockerfile.
 
-On va télécharger ou récuperer le docker souhaité avec le FROM, ici un serveur apache qui peut lire du php `FROM php:7.2-apache`
-Puis on copie à l'interieur de notre propre docker, le contenu souhaité avec COPY : `COPY content/ /var/www/html/`
+On va télécharger ou récuperer le docker souhaité avec le FROM, ici un serveur apache qui peut lire du php
+`FROM php:7.2-apache`
+Puis on copie à l'interieur de notre propre docker, le contenu souhaité avec COPY : 
+`COPY content/ /var/www/html/`
 
 * You are able to show where the apache config files are located (in a running container).
 
