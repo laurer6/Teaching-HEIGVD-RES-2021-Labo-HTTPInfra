@@ -21,14 +21,20 @@ $ docker docker build -t res/apache_php .
 ```
 
 ```bash
-$ docker run -p 9090:80 res/apache_php
+$ docker run -p 9090:80 res/apache_php  
 ```
+Ici, 9090 est le port souhaité
+
+
+Ensuite il faut taper notre addresse local avec le port souhaité, ici : `localhost:9090`
 
 * You have used a nice looking web template, different from the one shown in the webcast.
 
 On a utilisé ce bootstrap : https://onepagelove.com/bolt et on l'a modifié un peu.
 
 * You are able to explain what you do in the Dockerfile.
+
+
 
 * You are able to show where the apache config files are located (in a running container).
 
