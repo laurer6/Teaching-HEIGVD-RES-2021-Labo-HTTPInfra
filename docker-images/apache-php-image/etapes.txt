@@ -1,0 +1,2 @@
+-J'ai adapté le dockerfile par rapport au cours.
+-J'ai choisi un bootstrap de compte à rebours avec quelques image changé et text
