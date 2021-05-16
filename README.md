@@ -24,6 +24,7 @@ En lançant le docker dans express-image, ça renvoit un nom aléatoire.
 
 On renvoie une liste d'animaux, avec leur modèle, leur age et leur prénom.
 
+![animaux](https://user-images.githubusercontent.com/58049740/118405596-14ba8c00-b679-11eb-9ac1-db58ce77aa06.png)
 
 * Vous n'êtes pas obligé d'utiliser express.js ; si vous le souhaitez, vous pouvez utiliser un autre framework web JavaScript ou un autre langage.
 
