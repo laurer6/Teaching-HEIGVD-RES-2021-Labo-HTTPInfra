@@ -17,7 +17,7 @@ https://github.com/laurer6/Teaching-HEIGVD-RES-2021-Labo-HTTPInfra/blob/fb-apach
 il suffit de lancer ces deux commandes dans le répertoire où se trouve le Dockerfile : 
 
 ```bash
-$ docker docker build -t res/apache_php .
+$ docker build -t res/apache_php .
 ```
 
 ```bash
