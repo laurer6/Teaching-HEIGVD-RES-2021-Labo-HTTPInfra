@@ -1,36 +1,48 @@
-### Étape 2 : Serveur HTTP dynamique avec express.js
+### Étape 3 : Reverse proxy avec apache (configuration statique)
 
 ### Webcasts
 
-* [Labo HTTP (2a) : Application node "dockerisée"](https://www.youtube.com/watch?v=fSIrZ0Mmpis)
-* [Labo HTTP (2b) : Application express "dockerisée"](https://www.youtube.com/watch?v=o4qHbf_vMu0)
+* [Labo HTTP (3a) : reverse proxy apache httpd dans Docker](https://www.youtube.com/watch?v=WHFlWdcvZtk)
+* [Labo HTTP (3b) : reverse proxy apache httpd dans Docker](https://www.youtube.com/watch?v=fkPwHyQUiVs)
+* [Labo HTTP (3c) : reverse proxy apache httpd dans Docker](https://www.youtube.com/watch?v=UmiYS_ObJxY)
+
 
 ### Critères d'acceptation
 
-* Vous avez un repo GitHub avec tout ce qui est nécessaire pour construire l'image Docker.
+* Vous avez un repo GitHub avec tout ce qui est nécessaire pour construire l'image Docker pour le conteneur.
 
-
-
-* Vous pouvez faire une démo, où vous construisez l'image, exécutez un conteneur et accédez au contenu depuis un navigateur.
-
-On va utiliser la version 14.17.0 de NodeJs
-
-* Vous générez un contenu dynamique et aléatoire et renvoyez une charge utile JSON au client.
-
-En lançant le docker dans express-image, ça renvoit un nom aléatoire.
-
-
-* Vous ne pouvez pas renvoyer le même contenu que le webcast (vous ne pouvez pas renvoyer une liste de personnes).
-
-On renvoie une liste d'animaux, avec leur modèle, leur age et leur prénom.
-
-
-* Vous n'êtes pas obligé d'utiliser express.js ; si vous le souhaitez, vous pouvez utiliser un autre framework web JavaScript ou un autre langage.
-
- pour trouver l'ip, on va plutôt faire un docker inspect NOM_DOCKER | grep -i IPAdd, docker-machine marche pas.
+ https://github.com/laurer6/Teaching-HEIGVD-RES-2021-Labo-HTTPInfra/edit/fb-apache-reverse-proxy
  
- Une fois le docker lancé avec la commande docker run -p 9090:3000, on peut y accéder avec localhost:9090
+* Vous pouvez faire une démo, où vous démarrez à partir d'un environnement Docker "vide" (aucun conteneur en cours d'exécution) et où vous démarrez 3 conteneurs : serveur statique, serveur dynamique et reverse proxy ; dans la démo, vous prouvez que le routage est fait correctement par le reverse proxy.
+
+Pour tout faire fonctionner, vu qu'on utilise des ip hardcodées, il faut lancer les conteneur docker dans le bon ordre et faire attention que les ip sont les mêmes que ce qui est marqué dans le .conf du docker reversProxy.
+
+Soit:
+
+docker build -t res/apache-static .
+docker run res/apache-static
+
+puis:
+
+docker build -t res/express-dynamic . 
+docker run res/express-dynamic
+
+et enfin:
+
+docker build -t res/apache_rp .
+docker run -p 8080:80 res/apache_rp
+
+Pour tester le reverse il faut modifier le /etc/hosts en agjoutant la ligne 192.169.99.100 res.demo.ch
+demo.res.ch:8080               pour être redirigé sur le site statique
+demo.res.ch:8080/api/students/  pour le site dynamique
+
+ 
+* Vous êtes capable d'expliquer et de prouver que les serveurs statiques et dynamiques ne peuvent pas être atteints directement (le reverse proxy est un point d'entrée unique dans l'infra). 
+
+
+ 
+* Vous êtes capable d'expliquer pourquoi la configuration statique est fragile et doit être améliorée.
+
+
 
 * Vous avez **documenté** votre configuration dans votre rapport.
-
-Oui
