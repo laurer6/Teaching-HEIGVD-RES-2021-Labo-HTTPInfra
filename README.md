@@ -39,10 +39,12 @@ demo.res.ch:8080/api/students/  pour le site dynamique
  
 * Vous êtes capable d'expliquer et de prouver que les serveurs statiques et dynamiques ne peuvent pas être atteints directement (le reverse proxy est un point d'entrée unique dans l'infra). 
 
-
+On a un message d'erreur si on ne spécifie pas le chemin, on tombe sur la configuration du virtualhost qui ne va pa nous laisser accéder au contenu. Pour y accéder on peut lui spécidier un chemin via le telnet, avec le host. Dans une barre d'addresse du navigateur on ne peut pas directement. 
  
 * Vous êtes capable d'expliquer pourquoi la configuration statique est fragile et doit être améliorée.
 
-
+Parce que les ip qu'on a mit dans la configuration peuvent facilement changer. 
 
 * Vous avez **documenté** votre configuration dans votre rapport.
+
+Oui
