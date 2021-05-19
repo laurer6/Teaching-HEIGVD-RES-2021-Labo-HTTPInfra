@@ -13,6 +13,16 @@
 
 * Vous pouvez faire une démo, où vous construisez l'image, exécutez un conteneur et accédez au contenu depuis un navigateur.
 
+il suffit de lancer ces deux commandes dans le répertoire où se trouve le Dockerfile : 
+
+```bash
+$ docker build -t res/express_students_php .
+```
+
+```bash
+$ docker run -p 9090:80 res/express_students_php  
+```
+
 On va utiliser la version 14.17.0 de NodeJs
 
 * Vous générez un contenu dynamique et aléatoire et renvoyez une charge utile JSON au client.
