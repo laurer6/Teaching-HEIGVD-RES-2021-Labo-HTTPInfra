@@ -18,20 +18,20 @@
 Pour tout faire fonctionner, vu qu'on utilise des ip hardcodées, il faut lancer les conteneur docker dans le bon ordre et faire attention que les ip sont les mêmes que ce qui est marqué dans le .conf du docker reversProxy.
 
 Soit:
-
+```bash
 docker build -t res/apache-static .
 docker run res/apache-static
-
+```
 puis:
-
+```bash
 docker build -t res/express-dynamic . 
 docker run res/express-dynamic
-
+```
 et enfin:
-
+```bash
 docker build -t res/apache_rp .
 docker run -p 8080:80 res/apache_rp
-
+```
 Pour tester le reverse il faut modifier le /etc/hosts en agjoutant la ligne 192.169.99.100 res.demo.ch
 demo.res.ch:8080               pour être redirigé sur le site statique
 demo.res.ch:8080/api/students/  pour le site dynamique
