@@ -17,6 +17,9 @@
 
 Pour tout faire fonctionner, vu qu'on utilise des ip hardcodées, il faut lancer les conteneur docker dans le bon ordre et faire attention que les ip sont les mêmes que ce qui est marqué dans le .conf du docker reversProxy.
 
+![ip express et apache](https://user-images.githubusercontent.com/58049740/118841233-6dcc2f00-b8c8-11eb-88e5-bf74b0b6b576.png)
+
+
 Soit:
 ```bash
 docker build -t res/apache-static .
@@ -40,6 +43,8 @@ demo.res.ch:8080/api/students/  pour le site dynamique
 * Vous êtes capable d'expliquer et de prouver que les serveurs statiques et dynamiques ne peuvent pas être atteints directement (le reverse proxy est un point d'entrée unique dans l'infra). 
 
 On a un message d'erreur si on ne spécifie pas le chemin, on tombe sur la configuration du virtualhost qui ne va pa nous laisser accéder au contenu. Pour y accéder on peut lui spécidier un chemin via le telnet, avec le host. Dans une barre d'addresse du navigateur on ne peut pas directement. 
+
+![connexion proxy](https://user-images.githubusercontent.com/58049740/118841336-889ea380-b8c8-11eb-8a42-6cf5df003e76.png)
  
 * Vous êtes capable d'expliquer pourquoi la configuration statique est fragile et doit être améliorée.
 
