@@ -1,13 +1,7 @@
-## Step 4: AJAX requests with JQuery
+### Critères d'acceptation
 
-### Webcasts
-
-* [Labo HTTP (4): AJAX avec JQuery](https://www.youtube.com/watch?v=fgpNEbgdm5k)
-
-### Acceptance criteria
-
-* You have a GitHub repo with everything needed to build the various images.
-* You can do a complete, end-to-end demonstration: the web page is dynamically updated every few seconds (with the data coming from the dynamic backend).
-* You are able to prove that AJAX requests are sent by the browser and you can show the content of th responses.
-* You are able to explain why your demo would not work without a reverse proxy (because of a security restriction).
-* You have **documented** your configuration in your report.
+* Vous avez un repo GitHub avec tout ce qui est nécessaire pour construire les différentes images.
+* Vous pouvez faire une démonstration complète, de bout en bout : la page web est mise à jour dynamiquement toutes les quelques secondes (avec les données provenant du backend dynamique).
+* Vous êtes capable de prouver que les requêtes AJAX sont envoyées par le navigateur et vous pouvez montrer le contenu des réponses.
+* Vous êtes capable d'expliquer pourquoi votre démo ne fonctionnerait pas sans un reverse proxy (à cause d'une restriction de sécurité).
+* Vous avez **documenté** votre configuration dans votre rapport.
