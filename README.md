@@ -39,7 +39,11 @@ Il faut lancer plusieurs container aléatoirement pour être sûr que le fait d'
 
 Par exemple, de cette manière:
 
+```bash
 docker run -d -e STATIC_APP=172.17.0.5:80 -e DYNAMIC_APP=172.17.0.8:3000 --name apache_rp2 -p 8080:80 res/apache_rp
+```
+
+
 
 * Vous avez **documenté** votre configuration dans votre rapport.
 
