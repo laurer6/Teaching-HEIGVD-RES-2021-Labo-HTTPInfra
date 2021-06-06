@@ -185,6 +185,32 @@ Par exemple, de cette manière:
 docker run -d -e STATIC_APP=172.17.0.5:80 -e DYNAMIC_APP=172.17.0.8:3000 --name apache_rp2 -p 8080:80 res/apache_rp
 ```
 
+### Management UI (0.5 pt)
+
+Ici, pas besoin de créer un autre repo pour cette partie, car il suffit d'utiliser des commandes docker pour avoir une app graphique qui permet de contrôler notre environnement docker.
+
+On a trouver sur le web, sur https://www.portainer.io/ , un container qui permete de faire tout ça, 
+Il suffit de lancer les deux commande suivante:
+
+pour pull l'image portaineer
+
+```bash
+docker pull portainer/portainer-ce
+```
+
+et encuite lancer le container selon le tutoriel du site
+
+```bas
+hker run -d -p 8000:8000 -p 9000:9000 --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
+```
+
+Ensuite il suffit d'y accéder, ici, sur localhost:9000, de créer un utilisateur et un mot de passe
+
+![login](https://user-images.githubusercontent.com/58049740/120924936-739e7e80-c6d6-11eb-8e64-66f64797a3e9.PNG)
+
+Puis de se connecter
+
+![portainer](https://user-images.githubusercontent.com/58049740/120924969-a5174a00-c6d6-11eb-9092-63c5a15d9e0e.PNG)
 
 
 
