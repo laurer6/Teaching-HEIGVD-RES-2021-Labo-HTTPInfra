@@ -222,5 +222,24 @@ Puis de se connecter
 
 ![portainer](https://user-images.githubusercontent.com/58049740/120924969-a5174a00-c6d6-11eb-9092-63c5a15d9e0e.PNG)
 
+### Load balancing: multiple server nodes (0.5pt)
+
+Nous avon sutiliser NGINX pour le load balancing
+
+il suffit de créer un container docker Nginx comme avec un dockerfile contenant ces info :
+
+FROM nginx
+
+EXPOSE 80
+
+COPY nginx.conf /etc/nginx/
+
+puis de le build avec la commade
+
+$docker build -t res/load-balancing .
+
+
+
+### Load balancing: round-robin vs sticky sessions (0.5 pt)
 
 
