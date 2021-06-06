@@ -26,6 +26,8 @@ Ensuite il faut taper notre addresse local avec le port souhaité dans notre nav
  
 On a utilisé ce bootstrap : https://onepagelove.com/bolt et on l'a modifié un peu.
 
+![siteweb](https://user-images.githubusercontent.com/58049740/120925105-41415100-c6d7-11eb-9bd9-136d073e3db6.PNG)
+
 * Ce qu'il faut faire dans le Dockerfile: 
 
 On va télécharger ou récuperer le docker souhaité avec le FROM, ici un serveur apache qui peut lire du php: 
@@ -68,6 +70,8 @@ En lançant le docker dans express-image, ça renvoit un nom aléatoire.
 * Différent contenu que le webcast.
 
 On renvoie une liste d'animaux, avec leur 'modèle', leur age et leur prénom.
+
+![Json](https://user-images.githubusercontent.com/58049740/120925114-4ef6d680-c6d7-11eb-9146-5e3f5bd5f221.PNG)
 
 pour trouver l'ip, on va plutôt faire un docker inspect NOM_DOCKER | grep -i IPAdd, docker-machine marche pas.
  
