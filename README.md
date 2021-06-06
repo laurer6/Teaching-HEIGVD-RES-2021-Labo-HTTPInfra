@@ -259,7 +259,11 @@ puis tester l'adresse demo.res.ch ou demo.res.ch/api/students
 ### Load balancing: round-robin vs sticky sessions (0.5 pt)
 
 Nginx utilise la méthode round-robin par défault pour le load balancing.
-pour forcer la méthode du "Sticky sessions" , il faut rajouter la ligne hash $remote_addr.
+pour forcer la méthode du "Sticky sessions" , il faut rajouter la ligne:
+
+```bash
+hash $remote_addr.
+```
 
 Le plus gros inconvénient de l'utilisation de l'algorithme round robin dans l'équilibrage de charge est que l'algorithme suppose que les serveurs sont suffisamment similaires pour gérer des charges équivalentes. Si certains serveurs ont plus de CPU, de RAM ou d'autres spécifications, l'algorithme n'a aucun moyen de distribuer plus de demandes à ces serveurs. Par conséquent, les serveurs ayant une capacité moindre peuvent être surchargés et tomber en panne plus rapidement tandis que la capacité des autres serveurs reste inactive.
 
