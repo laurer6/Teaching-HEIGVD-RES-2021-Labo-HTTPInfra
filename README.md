@@ -208,7 +208,7 @@ pour pull l'image portaineer
 docker pull portainer/portainer-ce
 ```
 
-et encuite lancer le container selon le tutoriel du site
+et encuite lancer le container selon le tutoriel du site (ici sous linux)
 
 ```bas
 hker run -d -p 8000:8000 -p 9000:9000 --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
