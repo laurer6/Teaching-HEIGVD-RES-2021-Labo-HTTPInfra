@@ -210,8 +210,8 @@ docker pull portainer/portainer-ce
 
 et encuite lancer le container selon le tutoriel du site (ici sous linux)
 
-```bas
-hker run -d -p 8000:8000 -p 9000:9000 --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
+```bash
+docker run -d -p 8000:8000 -p 9000:9000 --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
 ```
 
 Ensuite il suffit d'y accéder, ici, sur localhost:9000, de créer un utilisateur et un mot de passe
@@ -236,8 +236,22 @@ COPY nginx.conf /etc/nginx/
 
 puis de le build avec la commade
 
+```bash
 $docker build -t res/load-balancing .
+```
 
+ensuite, pour l'exemple, il faut lancer deux container de chaque serveur, soit 2 serveur statique et 2 serveur dynamique.
+
+Il faut faire attention à leur ip vu que l'on va informer le container NGINX de leur ip lorsqu'on les ajoutre dans le fichier conf de nginx.
+
+![nginx conf](https://user-images.githubusercontent.com/58049740/120930196-9b004600-c6ec-11eb-99c7-ef082404401c.PNG)
+
+Il n'y plus qu'à lancer le container :
+
+```bash
+docker run res/load-balancing
+```
+puis tester l'adresse demo.res.ch ou demo.res.ch/api/students
 
 
 ### Load balancing: round-robin vs sticky sessions (0.5 pt)
