@@ -4,10 +4,6 @@
 
 On doit faire serveur HTTP statique. Le but est de dockériser une image apache, ici en version 7.2 rouvée sur le site dockerhub. Cette version ne devrait pas posé de problème par rapport à la version du webcast de 2016.
 
-* Repo github pour cette partie:
-
-https://github.com/laurer6/Teaching-HEIGVD-RES-2021-Labo-HTTPInfra/blob/fb-apache-static/
-
 * Pour lancer la demo:
 
 il suffit de lancer ces deux commandes dans le répertoire où se trouve le Dockerfile : 
@@ -48,10 +44,6 @@ Ensuite il faut se trouver dans `etc/apache2/` avec la commande `cd etc/apache2/
 
 On a du crée et dockerisé un serveur http dynamique avec le framweork express. La tâche était de renvoyer une liste d'objet aléatoire au format JSON.
 
-* Repo GitHub.
-
-https://github.com/laurer6/Teaching-HEIGVD-RES-2021-Labo-HTTPInfra/tree/fb-express-dynamic
-
 * Pour la démo:
 
 il suffit de lancer ces deux commandes dans le répertoire où se trouve le Dockerfile : 
@@ -84,9 +76,6 @@ Une fois le docker lancé avec la commande docker run -p 9090:3000, on peut y ac
 
 Ici, le but est d'avoir accès au serveur statique de l'étape et du serveur dynamique de l'étape 2 via un reverse proxy. On pourra donc accéder aux deux sans faire de port mapping
 
-* Repo GitHub avec tout ce qui est nécessaire pour construire l'image Docker pour le conteneur:
-
- https://github.com/laurer6/Teaching-HEIGVD-RES-2021-Labo-HTTPInfra/edit/fb-apache-reverse-proxy
  
 * Pour la démo:
 
@@ -129,9 +118,6 @@ Parce que les ip qu'on a mit dans la configuration peuvent facilement changer.
 
 On a ajouté un script pour que le site web afficher une phrase différente toute les 5 secondes dans l'exemple de page statique de l'étape 1, phrase générée à l'aide de notre serveur express de l'étape 2.
 
-* Vous avez un repo GitHub avec tout ce qui est nécessaire pour construire les différentes images.
-
-https://github.com/laurer6/Teaching-HEIGVD-RES-2021-Labo-HTTPInfra/edit/fb-ajax-jquery
 
 il faut construire les 3 images suivantes dans l'ordre, leur Dockerfile a été modifié pour possédé l'app VIM et ainsi pouvoir facilement modifier les fichiers des containers.
 
@@ -162,9 +148,6 @@ Toutes les 2 secondes, le text change avec un type, un genre et un animal diffé
 
 Ici nous devions résoudre le problème d'ip hardcodé que nous avions utilisé pour l'étape 3. Pour ce faie utiliser un des variables d'environnement qui contiendront l'ip du serveur dynamique et statique, que l'on va pouvoir initialiser au moment de lancer le container qui contienr le reverse proxy.
 
-* Repo GitHub:
-
-https://github.com/laurer6/Teaching-HEIGVD-RES-2021-Labo-HTTPInfra/edit/fb-dynamic-configuration
 
 
 * Trouver un moyen de remplacer la configuration statique du reverse proxy (adresses IP codées en dur) par une configuration dynamique.
