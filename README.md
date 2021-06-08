@@ -10,9 +10,6 @@
 
 ### Critères d'acceptation
 
-* Vous avez un repo GitHub avec tout ce qui est nécessaire pour construire les différentes images.
-
-https://github.com/laurer6/Teaching-HEIGVD-RES-2021-Labo-HTTPInfra/edit/fb-dynamic-configuration
 
 
 * Vous avez trouvé un moyen de remplacer la configuration statique du reverse proxy (adresses IP codées en dur) par une configuration dynamique.
