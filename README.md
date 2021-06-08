@@ -8,9 +8,6 @@
 
 ### Acceptance criteria
 
-* You have a GitHub repo with everything needed to build the Docker image
-
-https://github.com/laurer6/Teaching-HEIGVD-RES-2021-Labo-HTTPInfra/blob/fb-apache-static/
 
 * You can do a demo, where you build the image, run a container and access content from a browser.
 
