@@ -138,7 +138,7 @@ il faut construire les 3 images suivantes dans l'ordre, leur Dockerfile a été 
 ```bash
 docker build -t res/apache_php .
 docker build -t res/express_students .
-docker build -t res/apache_prp .
+docker build -t res/apache_rp .
 ```
 
 ```bash
