@@ -1,8 +1,5 @@
 ### Critères d'acceptation
 
-* Vous avez un repo GitHub avec tout ce qui est nécessaire pour construire les différentes images.
-
-https://github.com/laurer6/Teaching-HEIGVD-RES-2021-Labo-HTTPInfra/edit/fb-ajax-jquery
 
 il faut construire les 3 images suivantes dans l'ordre, leur Dockerfile a été modifié pour possédé l'app VIM et ainsi pouvoir facilement modifier les fichiers des containers.
 
