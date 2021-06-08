@@ -9,9 +9,7 @@
 
 ### Critères d'acceptation
 
-* Vous avez un repo GitHub avec tout ce qui est nécessaire pour construire l'image Docker pour le conteneur.
 
- https://github.com/laurer6/Teaching-HEIGVD-RES-2021-Labo-HTTPInfra/edit/fb-apache-reverse-proxy
  
 * Vous pouvez faire une démo, où vous démarrez à partir d'un environnement Docker "vide" (aucun conteneur en cours d'exécution) et où vous démarrez 3 conteneurs : serveur statique, serveur dynamique et reverse proxy ; dans la démo, vous prouvez que le routage est fait correctement par le reverse proxy.
 
